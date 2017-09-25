@@ -1,0 +1,95 @@
+@-webkit-keyframes bounce {
+    0% {
+        transform: scale(1, 1) translate(0px, 0px);
+    }
+    30% {
+        transform: scale(1, 0.8) translate(0px, 10px);
+    }
+    75% {
+        transform: scale(1, 1.1) translate(0px, -25px);
+    }
+    100% {
+        transform: scale(1, 1) translate(0px, 0px);
+    }
+}
+
+.bounce {
+    position: absolute;
+    top: 10;
+    right: 1%;
+    z-index: 999;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 17%;
+    height: 50px;
+    width: 15%;
+    background: #ac1a00;
+    border-radius: 950px;
+    color: white;
+    font-size: 70%;
+    -webkit-animation: bounce 0.95s infinite;
+}
+
+#contact_form h3 {
+    color: #FFEBDB;
+}
+
+#contact_form #agree {
+    background-color: rgba(3, 34, 34, 1);
+    color: white;
+    padding: 1%;
+    font-size: 70%;
+}
+
+#contact_form #isaform {
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+    /* ................................For tablets:.......................... */
+    .bounce {
+        position: absolute;
+        top: 0;
+        right: 1%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 18%;
+        height: 50px;
+        width: 20%;
+        background: #ac1a00;
+        border-radius: 900px;
+        color: white;
+        font-size: 90%;
+        -webkit-animation: bounce 0.95s infinite;
+    }
+    #contact_form #agree {
+        padding: 1%;
+        font-size: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* ................................For Computers:.......................... */
+    .bounce {
+        position: absolute;
+        top: 0;
+        right: 5%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 10%;
+        height: 50px;
+        width: 10%;
+        background: #ac1a00;
+        border-radius: 950px;
+        color: white;
+        font-size: 100%;
+        -webkit-animation: bounce 0.95s infinite;
+    }
+    #contact_form #agree {
+        padding: 1%;
+        font-size: 100%;
+    }
+}
+
+
+}

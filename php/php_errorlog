@@ -1,0 +1,3 @@
+[27-Jul-2017 02:06:06 CST6CDT] PHP Parse error:  syntax error, unexpected '$senderLname' (T_VARIABLE), expecting ',' or ')' in /home/sanjur39/public_html/final-project-second-draft/php/contact_synergy.php on line 22
+[27-Jul-2017 02:42:34 CST6CDT] PHP Parse error:  syntax error, unexpected '$subject' (T_VARIABLE) in /home/sanjur39/public_html/final-project-second-draft/php/contact_synergy.php on line 9
+[27-Jul-2017 02:43:28 CST6CDT] PHP Parse error:  syntax error, unexpected '.' in /home/sanjur39/public_html/final-project-second-draft/php/contact_synergy.php on line 17

@@ -1,0 +1,692 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <title>Indian Student Association</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/icon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Slab" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" type="text/css" href="../css/isaform.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!--For DOB start-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+    <!--For DOB end-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/css/bootstrapvalidator.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!--For DOB start-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/js/bootstrap-datetimepicker.min.js"></script>
+    <!--For DOB end-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js"></script>
+    <script src="../js/contact.js" type="text/javascript"></script>
+    <script src="../js/isaform.js"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="sr-only">Toggle Menu</span>
+                     </button>
+                    <a class="navbar-brand" href="../index.html">Indian Student Association</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">HOME</a></li>
+                        <li><a href="newstudent.html">NEW STUDENTS</a></li>
+                        <li><a href="events.html">EVENTS</a></li>
+                        <li class="active"><a href="committee.html">ISA COMMITTEE</a></li>
+                        <li><a href="gallery.html">GALLERY</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+    <br><br><br><br>
+
+    <!--..................... ISA Registration Form Starts Here........................... -->
+    <div id="abc">
+        <!-- Popup Div Starts Here -->
+        <div id="popupContact">
+            <!-- Contact Us Form -->
+
+            <div class="container">
+
+                <form class="well form-horizontal" action="../php/isaform.php" method="post" id="contact_form">
+                    <button type="button" class="close" onclick="div_hide()">&#10060;</button>
+
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>ISA Team Registration Form (2017-2018)</legend>
+
+                        <h3>Personal Information :</h3>
+                        <hr>
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label for="fullname" class="col-md-4 control-label">Full Legal Name</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="fullname" name="full_name" placeholder="Full Legal Name" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label for="gender" class="col-md-4 control-label">Gender</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                    <select id="gender" name="gender" class="form-control selectpicker">
+                                            <option value=" " disabled selected>Please select your Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                            <option value="Don't want to disclose">Do not want  to disclose</option>
+                                        </select></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="datepicker" class="col-md-4 control-label">Date Of Birth</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group date" id="datetimepicker1">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                    <input type='text' placeholder="yyyy-mm-dd" class="form-control" name="dob" id="datepicker" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="anumber" class="col-md-4 control-label">A#</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-font"></i></span>
+                                    <input id="anumber" name="anumber" placeholder="A0XXXXXXX" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label for="email" class="col-md-4 control-label">E-Mail</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                    <input id="email" name="email" placeholder="E-Mail Address" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label for="phone" class="col-md-4 control-label">Phone </label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                    <input id="phone" name="phone" placeholder="1234567890" class="form-control" type="tel" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Text area -->
+                        <div class="form-group">
+                            <label for="address" class="col-md-4 control-label">Mailing Address</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <textarea id="address" class="form-control" name="address" placeholder="Street,City,State,Country,Zip" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Educational Information: </h3>
+                        <hr>
+                        <div class="form-group">
+                            <label for="enrolled" class="col-md-4 control-label">Enrolled for </label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                    <select id="enrolled" name="enroll" class="form-control selectpicker">
+                                            <option value="" disabled selected>Please choose..</option>
+                                            <option value="Undergrad">Undergrad</option>
+                                            <option value="Masters">Masters</option>
+                                            <option value="Phd">Phd</option>
+                                        </select></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="major" class="col-md-4 control-label">Major</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                                    <input id="major" name="Major" placeholder="Enter your major" class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="q1" class="col-md-4 control-label">What are your Educational and Carrer Goals?</label>
+                            <div class="col-md-4 inputGroupContainer">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                    <textarea id="q1" class="form-control" name="Q1" placeholder="Brief Response" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>ISA Queries: </h3>
+                        <hr>
+                        <div class="form-group">
+                            <label for="position" class="col-md-4 control-label">Position of your Interest</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                    <select id="position" name="position" class="form-control selectpicker">
+                                            <option value="" disabled selected>Please choose..</option>
+                                              <option value="Cultural Member"> Cultural Member</option>
+                                            <option value="Diversity Member">Diversity Member</option>
+                                            <option value="Sports Secretary">Sports Secretary</option>
+                                            <option value="Public Relations Member ">Public Relations Member</option>
+                                            <option value="Web Master">Web Master</option>
+                                            <option value="Finance">Finance</option>   
+                                        </select></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q2" class="col-md-4 control-label">Why is it important to share your culture at USU?</label>
+                            <div class="col-md-4 inputGroupContainer">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                    <textarea id="q2" class="form-control" name="Q2" placeholder="Brief Response" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q3" class="col-md-4 control-label">How will being on the ISA executive council help you?</label>
+                            <div class="col-md-4 inputGroupContainer">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                    <textarea id="q3" class="form-control" name="Q3" placeholder="Brief Response" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="q4" class="col-md-4 control-label">What do you wish to accomplish as a member of the council?</label>
+                            <div class="col-md-4 inputGroupContainer">
+
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                    <textarea id="q4" class="form-control" name="Q4" placeholder="Brief Response" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group" id="agree">
+                            <label for="terms" class="col-xs-3 control-label">Terms of use</label>
+                            <div class="col-xs-9">
+                                <div>
+                                    <p>I certify the information provided on this application is correct to the best of my knowledge, and acknowledge that I am able to fulfill all duties of office specified in the ISC constitution. I understand failure to meet the requirements could result in the disqualification of my application.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-xs-6 col-xs-offset-3">
+                                <div class="checkbox">
+                                    <span>
+                                        <input id="terms" type="checkbox" name="agree" value="agree" required/> Agree with the terms and conditions
+                                        </span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                    </fieldset>
+                    <!-- Button -->
+                    <div class="form-group" id="isaform"><br>
+
+                        <div>
+                            <button type="submit" class="btn btn-warning">Submit Form <span class="glyphicon glyphicon-send"></span></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!--.......... ISA Registration Form Ends Here........................... -->
+    <!-- Display Popup Button -->
+    <button class="bounce" id="popup" onclick="div_show()">Register For ISA !!!</button>
+    <div id="bg">
+
+        <!--Thumbnail Portion-->
+        <div class="container">
+            <div class="row">
+                <div>
+                    <p class="isahead">
+                        &nbsp;&nbsp;&nbsp;ISA MEMBERS (2016-2017)</p>
+                    <div id="role">
+                        &nbsp;&nbsp;&nbsp;
+                        <div>
+                            <a id="roles" href="#" data-toggle="modal" data-target="#isaroles">What is ISA and what are the differenet roles and their responsibilities <span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <div class="modal fade" id="isaroles" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#10060;</button>
+                                        <h4>Indian Student Association</h4>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <p>ISA is Indian student association formed by Indian Students in USU for Indians. The role of ISA is to maintain and leverage the indian traditions and cultures in USU.</p>
+
+                                        <p>The main responsibility of Cultural Secretary is to bring new cultural and traditional initiatives for various festivals celebrated at USU. The cultural members work in a team with cultural secretary to bring something new to platform.</p>
+
+                                        <p>The PR team takes care of establishing the valuable public relations and marketing for events.</p>
+                                        <p>
+                                            The web master is the admin of the website and manages everything related to website and social media accounts of ISA.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Sanju.jpg" alt="Sanju Raghuwanshi" data-toggle="modal" data-target="#president">
+                        <p class="designation">President</p>
+                        <p class="name">Sanju Raghuwanshi</p>
+                        <div class="modal fade" id="president" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">President</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Sanju Raghuwanshi</h3>
+                                        <h4>From: <a href="https://goo.gl/maps/ARNsws2WAE52" target="_blank"> Vidisha, Madhya Pradesh</a></h4>
+                                        <h4>Contact Number: (435)720-8666</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">sraghuwanshi51@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Anuj.jpg" alt="Anuj Khasgiwala" data-toggle="modal" data-target="#vicepresident"><br><br>
+                        <p class="designation">Vice President</p>
+                        <p class="name">Anuj Khasgiwala</p>
+                        <div class="modal fade" id="vicepresident" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Vice President</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Anuj Khasgiwala</h3>
+                                        <h4>From: Indore, Madhya Pradesh</h4>
+                                        <h4>Contact Number: (435)554-9078</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">anujkhasgiwala@aggiemail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/logo/logo.png" alt="Cultural Secretary" data-toggle="modal" data-target="#culturalsecretary">
+                        <p class="designation">Cultural Secretary</p>
+                        <p class="name">Not Available</p>
+                        <div class="modal fade" id="culturalsecretary" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Cultural Secretary</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Not Available</h3>
+                                        <h4>From: NA</h4>
+                                        <h4>Contact Number: NA</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/logo/logo.png" alt="ultural Member" data-toggle="modal" data-target="#culturalmember">
+                        <p class="designation">Cultural Member</p>
+                        <p class="name">Not Available</p>
+                        <div class="modal fade" id="culturalmember" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Cultural Secretary</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Not Available</h3>
+                                        <h4>From: NA</h4>
+                                        <h4>Contact Number: NA</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/logo/logo.png" alt="Cultural Member" data-toggle="modal" data-target="#culturalmember1">
+                        <p class="designation">Cultural Member</p>
+                        <p class="name">Not Available</p>
+                        <div class="modal fade" id="culturalmember1" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Cultural Secretary</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Not Available</h3>
+                                        <h4>From: NA</h4>
+                                        <h4>Contact Number: NA</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Kanak.jpeg" alt="Kanak BulBul" data-toggle="modal" data-target="#culturalmember2">
+                        <p class="designation">Cultural Member</p>
+                        <p class="name">Kanak Bulbul</p>
+                        <div class="modal fade" id="culturalmember2" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Cultural Member</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Kanak BulBul</h3>
+                                        <h4>From: Hisar, Haryana</h4>
+
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">drkbulbul@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/fall2015/Bharti.jpg" alt="Bharti Sing Chaparro" data-toggle="modal" data-target="#culturalmember3">
+                        <p class="designation">Cultural Member</p>
+                        <p class="name">Bharti Sing Chaparro</p>
+                        <div class="modal fade" id="culturalmember3" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Cultural Member</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Bharti Sing Chaparro</h3>
+                                        <h4>From: USA</h4>
+
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">NA@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/fall2015/Sonali.jpg" alt="Sonali Kashid" data-toggle="modal" data-target="#publicrelationhead">
+                        <p class="designation">Public Relation Head</p>
+                        <p class="name">Sonali Kashid</p>
+                        <div class="modal fade" id="publicrelationhead" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Public Relation Head</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Sonali Kashid</h3>
+                                        <h4>From: <a href="https://goo.gl/maps/ARNsws2WAE52" target="_blank"> Pune, Maharashtra</a></h4>
+
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">kashidsonali1992@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Asmita.JPG" alt="Asmita Pal" data-toggle="modal" data-target="#publicrelations">
+                        <p class="designation">Public Relations</p>
+                        <p class="name">Asmita Pal</p>
+                        <div class="modal fade" id="publicrelations" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Public Relations</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Asmita Pal</h3>
+                                        <h4>From: Bengal, Kolkata</h4>
+
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">asmita5702@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Avik.jpg" alt="Avik Chattaraj" data-toggle="modal" data-target="#publicrelations1">
+                        <p class="designation">Public Relations</p>
+                        <p class="name">Avik Chattaraj</p>
+                        <div class="modal fade" id="publicrelations1" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Public Relations</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Avik Chattaraj</h3>
+                                        <h4>From: Bengal, Kolkata</h4>
+
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">NA@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/logo/logo.png" alt="Web Master" data-toggle="modal" data-target="#webmaster">
+                        <p class="designation">WebMaster</p>
+                        <p class="name">Not Available</p>
+                        <div class="modal fade" id="webmaster" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">WeMaster</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Not Available</h3>
+                                        <h4>From: NA</h4>
+                                        <h4>Contact Number: NA</h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">NA@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="thumbnail">
+                        <img src="../assets/images/ISAMembers/Fall2016/Rohit.jpg" alt="Rohit Gopalan" data-toggle="modal" data-target="#finance">
+                        <br>
+                        <p class="designation">Finance</p>
+                        <p class="name">Rohit Gopalan</p>
+                        <div class="modal fade" id="finance" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&#10060;</button>
+                                        <h4 class="modal-title">Finance</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>Rohit Gopalan</h3>
+                                        <h4>From: <a href="https://goo.gl/maps/ARNsws2WAE52" target="_blank"> Mumbai, Maharashtra</a></h4>
+                                        <h4>Email: <a href="../pages/contact.html" target="_blank">NA@gmail.com</a></h4>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div id="social"><a href="https://www.facebook.com/groups/143071139070169/" target="_blank"><i id="fb" class="fa fa-facebook-square" aria-hidden="true"><span class="sr-only">Facebook</span></i></a><a href="https://twitter.com/isautahstate" target="_blank"><i id="twt" class="fa fa-twitter-square" aria-hidden="true"><span class="sr-only">twitter</span></i></a><a href="https://www.instagram.com/isautahstate/" target="_blank"><i id="inst" class="fa fa-instagram" aria-hidden="true"><span class="sr-only">Instagram</span></i></a><a href="https://www.youtube.com/channel/UCnowSyJAtcsVVI0WemO6qWA" target="_blank"><i class="fa fa-youtube" aria-hidden="true"><span class="sr-only">Youtube</span></i></a></div>
+                <div class="copyright">
+                    <span class="glyphicon glyphicon-copyright-mark">Copyright 2005-2018 USU-ISA
+        </span>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+
+</body>
+
+</html>
